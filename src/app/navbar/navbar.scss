@@ -3,17 +3,46 @@
   transition: color 0.2s ease-in-out;
 }
 
-.text-info-hover:hover {
-  color: #0dcaf0 !important;
-  /* Color cian clásico de Bootstrap info */
+.text-info:hover {
+  color: #ffffff !important;
 }
 
-/* Espaciado personalizado opcional para los links del menú */
+.navbar-nav {
+  width: 100%;
+  justify-content: center !important;
+}
+
 .navbar-nav .nav-link {
+  font-size: 13px;
   font-weight: 500;
-  transition: color 0.2s ease;
+  transition: all 0.2s ease;
+  color: #ffffff;
+  opacity: 0.75;
+  border-bottom: 5px solid transparent;
+  padding-bottom: 8px;
 }
 
 .navbar-nav .nav-link:hover {
-  color: #0dcaf0;
+  color: #000000;
+  border-bottom: 2px solid #5e5e5e;
+  opacity: 1;
+}
+
+.navbar-nav .nav-link.active {
+  color: #ffffff;
+  border-bottom: 2px solid #5e5e5e;
+  opacity: 1;
+}
+
+.bg-dark-color {
+  background-color: #124caa !important;
+}
+
+.icon-info {
+  color: #000000;
+  transition: color 0.2s ease-in-out;
+}
+
+.icon-info:hover {
+  color: #ffffff;
 }
