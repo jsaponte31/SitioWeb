@@ -66,7 +66,7 @@ export class App implements OnInit {
           enable: true,
           area: 800,
         },
-        value: 80, // Cantidad de partículas (ajusta según veas el rendimiento)
+        value: 200, // Cantidad de partículas (ajusta según veas el rendimiento)
       },
       opacity: {
         value: 0.6,
