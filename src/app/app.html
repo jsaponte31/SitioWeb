@@ -1,2 +1,12 @@
-<app-navbar/>
-<router-outlet/>
+<ngx-particles
+  id="tsparticles"
+  [options]="particlesOptions">
+</ngx-particles>
+
+<div class="app-container">
+  <app-navbar></app-navbar>
+  
+  <main class="content-wrapper">
+    <router-outlet></router-outlet>
+  </main>
+</div>

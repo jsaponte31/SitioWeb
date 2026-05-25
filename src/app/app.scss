@@ -1,0 +1,23 @@
+#tsparticles {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  /* Forzamos a que esté estrictamente detrás de todo */
+  top: 0;
+  left: 0;
+}
+
+.app-container {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  pointer-events: none;
+  /* Permite que el mouse traspase el contenedor... */
+}
+
+/* ...Pero reactivamos los eventos en la navbar y el contenido para que los botones funcionen */
+app-navbar,
+main {
+  pointer-events: auto;
+}

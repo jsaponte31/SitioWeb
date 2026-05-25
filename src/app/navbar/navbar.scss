@@ -13,7 +13,7 @@
 }
 
 .navbar-nav .nav-link {
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 500;
   transition: all 0.2s ease;
   color: #ffffff;
@@ -35,12 +35,16 @@
 }
 
 .bg-dark-color {
-  background-color: #124caa !important;
+  background: rgba(18, 76, 170, 0.9) !important;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
 }
 
 .icon-info {
   color: #000000;
   transition: color 0.2s ease-in-out;
+  font-size: 28px;
 }
 
 .icon-info:hover {

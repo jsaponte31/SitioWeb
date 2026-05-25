@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+.background-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;  /* Al fondo */
+  background-color: #f8f9fa;/* O el color claro de Bootstrap que prefieras */
+}
+
+.app-container {
+  position: relative;
+  z-index: 2;/* Por encima del fondo */
+  min-height: 100vh;
+}
