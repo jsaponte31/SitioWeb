@@ -34,5 +34,26 @@
         "icon": "bi-person-fill"
       }
     ]
+  },
+  "technologies": {
+    "titulo": "Tecnologías",
+    "lista": [
+      { "nombre": "Angular", "icon": "logo-angular.webp" },
+      { "nombre": "ASP.NET", "icon": "logo-csharp.webp" },
+      { "nombre": "Perl", "icon": "logo-perl.webp" },
+      { "nombre": "Php", "icon": "logo-php.webp" },
+      { "nombre": "Git", "icon": "logo-git.png" },
+      { "nombre": "SQL", "icon": "logo-sql.png" }
+    ]
+  },
+  "skills": {
+    "titulo": "Habilidades",
+    "lista": [
+      { "nombre": "Kotlin", "icon": "logo-kotlin.webp" },
+      { "nombre": "Node.js", "icon": "logo-nodejs.png" },
+      { "nombre": "Java Script", "icon": "logo-javascript.png" },
+      { "nombre": "Docker", "icon": "logo-docker.png" },
+      { "nombre": "Jira", "icon": "logo-jira.svg" }
+    ]
   }
 }

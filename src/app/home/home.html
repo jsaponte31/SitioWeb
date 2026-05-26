@@ -26,3 +26,27 @@
     }
   </div>
 </div>
+
+<div class="technologies-section">
+  <h2 class="section-title">{{ langService.text().technologies.titulo }}</h2>
+  <div class="tech-grid">
+    @for (tech of langService.text().technologies.lista; track tech.nombre) {
+      <div class="tech-card">
+        <img src="assets/{{ tech.icon }}" alt="{{ tech.nombre }}">
+        <span class="tech-name">{{ tech.nombre }}</span>
+      </div>
+    }
+  </div>
+</div>
+
+<div class="skills-section">
+  <h2 class="section-title">{{ langService.text().skills.titulo }}</h2>
+  <div class="tech-grid">
+    @for (tech of langService.text().skills.lista; track tech.nombre) {
+      <div class="tech-card">
+        <img src="assets/{{ tech.icon }}" alt="{{ tech.nombre }}">
+        <span class="tech-name">{{ tech.nombre }}</span>
+      </div>
+    }
+  </div>
+</div>
