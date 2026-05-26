@@ -1,3 +1,93 @@
+.theme-toggle {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  z-index: 1000;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: #000000;
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: scale(1.1);
+}
+
+.theme-toggle:active {
+  transform: scale(0.95);
+}
+
+.theme-toggle.shake {
+  animation: vibrate 0.4s ease-in-out;
+}
+
+.scroll-top {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 1000;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: #000;
+  font-size: 1.15rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(12px);
+}
+
+.scroll-top.visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.scroll-top:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: scale(1.1);
+}
+
+.scroll-top:active {
+  transform: scale(0.95);
+}
+
+@keyframes vibrate {
+  0%, 100% { transform: translateX(0); }
+  10% { transform: translateX(-3px) rotate(-3deg); }
+  20% { transform: translateX(3px) rotate(3deg); }
+  30% { transform: translateX(-3px) rotate(-3deg); }
+  40% { transform: translateX(3px) rotate(3deg); }
+  50% { transform: translateX(-2px) rotate(-2deg); }
+  60% { transform: translateX(2px) rotate(2deg); }
+  70% { transform: translateX(-1px) rotate(-1deg); }
+  80% { transform: translateX(1px) rotate(1deg); }
+  90% { transform: translateX(0); }
+}
+
 #tsparticles {
   position: fixed;
   width: 100vw;
@@ -13,10 +103,17 @@
   z-index: 1;
   min-height: 100vh;
   pointer-events: none;
-  /* Permite que el mouse traspase el contenedor... */
+  --glass-text-color: #1a1a2e;
+  --card-title-color: #1a1a2e;
+  --card-desc-color: rgba(26, 26, 46, 0.8);
 }
 
-/* ...Pero reactivamos los eventos en la navbar y el contenido para que los botones funcionen */
+.app-container.dark-mode {
+  --glass-text-color: #ffffff;
+  --card-title-color: #ffffff;
+  --card-desc-color: rgba(255, 255, 255, 0.85);
+}
+
 app-navbar,
 main {
   pointer-events: auto;

@@ -1,26 +1,38 @@
-import { Component, signal, OnInit, Inject, PLATFORM_ID } from '@angular/core';
-import { isPlatformBrowser } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { Component, signal, OnInit, computed } from '@angular/core';
+import { Router, NavigationEnd, RouterOutlet } from '@angular/router';
 import { Navbar } from "./navbar/navbar";
 import { tsParticles } from '@tsparticles/engine';
-import { NgxParticlesModule } from '@tsparticles/angular';
 import { loadFull } from 'tsparticles';
-import { Engine, MoveDirection, OutMode } from '@tsparticles/engine';
+import { MoveDirection, OutMode } from '@tsparticles/engine';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Navbar, NgxParticlesModule],
+  imports: [RouterOutlet, Navbar],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })
 export class App implements OnInit {
   protected readonly title = signal('SitioWeb');
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
-  // Objeto de configuración para el efecto "Plexus" (Red de nodos)
-  particlesOptions = {
+  protected readonly darkMode = signal(App.initDarkMode());
+
+  private static initDarkMode(): boolean {
+    try {
+      const saved = localStorage.getItem('darkMode');
+      if (saved !== null) return saved === 'true';
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      localStorage.setItem('darkMode', String(prefersDark));
+      return prefersDark;
+    } catch {
+      return false;
+    }
+  }
+  protected readonly shakeToggle = signal(false);
+  protected readonly showScrollTop = signal(false);
+
+  protected readonly particlesOptions = computed(() => ({
     background: {
       color: {
-        value: '#f8f9fa', // Fondo claro de tu referencia
+        value: this.darkMode() ? '#1f2430' : '#f8f9fa',
       },
     },
     fpsLimit: 120,
@@ -28,7 +40,7 @@ export class App implements OnInit {
       events: {
         onHover: {
           enable: false,
-          mode: 'grab', // Crea líneas hacia el puntero del mouse
+          mode: 'grab',
         },
       },
       modes: {
@@ -41,11 +53,17 @@ export class App implements OnInit {
       },
     },
     particles: {
-      color: {
-        value: '#000000', // Color de los puntos (gris Bootstrap)
+      paint: {
+        color: {
+          value: this.darkMode() ? '#ffffff' : '#000000',
+        },
+        fill: {
+          enable: true,
+          opacity: 1,
+        },
       },
       links: {
-        color: '#000000', // Color de las líneas que unen los puntos
+        color: this.darkMode() ? '#ffffff' : '#000000',
         distance: 150,
         enable: true,
         opacity: 0.4,
@@ -58,7 +76,7 @@ export class App implements OnInit {
           default: OutMode.bounce,
         },
         random: false,
-        speed: 1, // Movimiento suave y lento
+        speed: 1,
         straight: false,
       },
       number: {
@@ -66,36 +84,71 @@ export class App implements OnInit {
           enable: true,
           area: 800,
         },
-        value: 200, // Cantidad de partículas (ajusta según veas el rendimiento)
+        value: 200,
       },
       opacity: {
-        value: 0.6,
+        value: 1,
       },
       shape: {
         type: 'circle',
       },
       size: {
-        value: { min: 2, max: 4 },
+        value: 3,
       },
     },
     detectRetina: true,
+  }));
+
+  constructor(private router: Router) {
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        this.shakeToggle.set(true);
+      }
+    });
+  }
+
+  private onScroll = (): void => {
+    this.showScrollTop.set(window.scrollY > 300);
   };
 
-  async ngOnInit(): Promise<void> {
-    // Validamos que el código corra estrictamente en el navegador del usuario
-    if (isPlatformBrowser(this.platformId)) {
-      try {
-        // PASO 1: Registramos los plugins obligatoriamente primero
-        await loadFull(tsParticles);
+  protected scrollToTop(): void {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 
-        // PASO 2: Una vez registrados, cargamos la configuración en el contenedor
-        await tsParticles.load({
-          id: 'tsparticles',
-          options: this.particlesOptions,
-        });
-      } catch (error) {
-        console.error('Error cargando tsParticles:', error);
+  protected toggleDarkMode(): void {
+    const next = !this.darkMode();
+    this.darkMode.set(next);
+    localStorage.setItem('darkMode', String(next));
+    this.reloadParticles();
+  }
+
+  private async reloadParticles(): Promise<void> {
+    try {
+      await tsParticles.load({
+        id: 'tsparticles',
+        options: this.particlesOptions(),
+      });
+    } catch (error) {
+      console.error('Error recargando tsParticles:', error);
+    }
+  }
+
+  async ngOnInit(): Promise<void> {
+    window.addEventListener('scroll', this.onScroll, { passive: true });
+    this.onScroll();
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        window.scrollTo({ top: 0, behavior: 'instant' });
       }
+    });
+    await loadFull(tsParticles);
+    try {
+      await tsParticles.load({
+        id: 'tsparticles',
+        options: this.particlesOptions(),
+      });
+    } catch (error) {
+      console.error('Error cargando tsParticles:', error);
     }
   }
 }

@@ -1,0 +1,38 @@
+{
+  "nav": {
+    "inicio": "Inicio",
+    "sobreMi": "Acerca de mí",
+    "proyectos": "Proyectos",
+    "contacto": "Contacto"
+  },
+  "hero": {
+    "saludo": "Hola, soy",
+    "botonCv": "Descargar CV",
+    "nombre": "Jhojan Aponte",
+    "titulo": "Desarrollador Full Stack",
+    "descripcion": "Desarrollador Full Stack con experiencia en ASP.NET, NestJS, Perl y Angular. Familiarizado con el uso de Docker y AWS para el despliegue de aplicaciones. Enfocado en resolver problemas técnicos de manera lógica y autónoma, priorizando siempre la calidad del resultado final."
+  },
+  "aboutme": {
+    "titulo": "¿Quién soy?",
+    "roles": [
+      {
+        "numero": "01",
+        "titulo": "Desarrollador de Software",
+        "descripcion": "Desarrollador de software con stack amplio, me destaco por mi capacidad analítica, autonomía y enfoque en resultados técnicos sólidos.",
+        "icon": "bi-code-slash"
+      },
+      {
+        "numero": "02",
+        "titulo": "Técnico TI",
+        "descripcion": "Técnico con capacidad adaptativa, conocimiento en redes LAN, hardware, conocimiento en servidores y alojamiento en nube.",
+        "icon": "bi-display"
+      },
+      {
+        "numero": "03",
+        "titulo": "Free Lance",
+        "descripcion": "Desarrollador de software freelance, autonomía y conocimiento. Diseñador de página web y desarrollador de aplicaciones android.",
+        "icon": "bi-person-fill"
+      }
+    ]
+  }
+}

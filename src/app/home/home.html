@@ -1,1 +1,28 @@
-<p>home works!</p>
+<div class="liquid-glass-card mt-5">
+  <div class="glass-content">
+    <h1>{{ langService.text().hero.nombre }}</h1>
+    <p class="subtitle">{{ langService.text().hero.titulo }}</p>
+    <p class="description">{{ langService.text().hero.descripcion }}</p>
+  </div>
+</div>
+
+<div class="about-me-section">
+  <h2 class="section-title">{{ langService.text().aboutme.titulo }}</h2>
+  <div class="cards-container">
+    @for (role of langService.text().aboutme.roles; track role.numero) {
+      <div class="role-card">
+        <div class="card-header">
+          <div class="card-icon">
+            <i [class]="'bi ' + role.icon"></i>
+          </div>
+          <span class="card-number">{{ role.numero }}</span>
+        </div>
+        <h3 class="card-title">{{ role.titulo }}</h3>
+        <p class="card-description">{{ role.descripcion }}</p>
+        <svg class="card-wave" viewBox="0 0 1440 120" preserveAspectRatio="none">
+          <path d="M0,40 Q360,10 720,40 T1440,40 L1440,120 L0,120 Z"></path>
+        </svg>
+      </div>
+    }
+  </div>
+</div>

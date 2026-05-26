@@ -1,9 +1,14 @@
-<ngx-particles
-  id="tsparticles"
-  [options]="particlesOptions">
-</ngx-particles>
+<div id="tsparticles"></div>
 
-<div class="app-container">
+<button class="theme-toggle" [class.shake]="shakeToggle()" (click)="toggleDarkMode()" [attr.aria-label]="darkMode() ? 'Modo claro' : 'Modo oscuro'" (animationend)="shakeToggle.set(false)">
+  <i class="bi" [class.bi-moon-fill]="!darkMode()" [class.bi-sun-fill]="darkMode()"></i>
+</button>
+
+<button class="scroll-top" [class.visible]="showScrollTop()" (click)="scrollToTop()" aria-label="Volver arriba">
+  <i class="bi bi-arrow-up"></i>
+</button>
+
+<div class="app-container" [class.dark-mode]="darkMode()">
   <app-navbar></app-navbar>
   
   <main class="content-wrapper">
