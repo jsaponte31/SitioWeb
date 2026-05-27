@@ -47,7 +47,7 @@
     ]
   },
   "skills": {
-    "titulo": "Habilidades",
+    "titulo": "Otras tecnologías",
     "lista": [
       { "nombre": "Kotlin", "icon": "logo-kotlin.webp" },
       { "nombre": "Node.js", "icon": "logo-nodejs.png" },
