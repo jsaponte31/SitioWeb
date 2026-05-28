@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark-color shadow-sm py-2 sticky-top">
+<nav class="navbar navbar-expand-lg navbar-dark shadow-sm py-2 sticky-top" [class.bg-dark-color]="!isScrolled()" [class.bg-glass]="isScrolled()">
   <div class="container">
     <a class="d-flex align-items-center fw-bold" [routerLink]="['/']">
       <img src="assets/logo-1.png" alt="Logo" height="60">

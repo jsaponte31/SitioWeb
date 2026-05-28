@@ -1,1 +1,55 @@
-<p>aboutme works!</p>
+<!-- Introducción -->
+<div class="liquid-glass-card mt-5">
+  <div class="glass-content">
+    <h1>{{ langService.text().aboutme.titulo }}</h1>
+    <p class="description">{{ langService.text().aboutme.introduccion }}</p>
+  </div>
+</div>
+
+<!-- Línea de Tiempo -->
+<div class="timeline-card">
+  <h2 class="timeline-title">{{ langService.text().aboutme.timeline.titulo }}</h2>
+  
+  <div class="timeline-container">
+    <div class="timeline">
+      <!-- Educación -->
+      <div class="timeline-section">
+        <h3 class="section-label">{{ langService.text().aboutme.timeline.educacion.encabezado }}</h3>
+        <div class="timeline-items left">
+          @for (edu of langService.text().aboutme.timeline.educacion.datos; track edu.anio) {
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <div class="timeline-year">{{ edu.anio }}</div>
+                <h4 class="timeline-item-title">{{ edu.titulo }}</h4>
+                <p class="timeline-institution">{{ edu.institucion }}</p>
+                <p class="timeline-item-description">{{ edu.descripcion }}</p>
+              </div>
+            </div>
+          }
+        </div>
+      </div>
+
+      <!-- Línea central -->
+      <div class="timeline-line"></div>
+
+      <!-- Experiencia -->
+      <div class="timeline-section">
+        <h3 class="section-label">{{ langService.text().aboutme.timeline.experiencia.encabezado }}</h3>
+        <div class="timeline-items right">
+          @for (exp of langService.text().aboutme.timeline.experiencia.datos; track exp.anio) {
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <div class="timeline-year">{{ exp.anio }}</div>
+                <h4 class="timeline-item-title">{{ exp.titulo }}</h4>
+                <p class="timeline-institution">{{ exp.empresa }}</p>
+                <p class="timeline-item-description">{{ exp.descripcion }}</p>
+              </div>
+            </div>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

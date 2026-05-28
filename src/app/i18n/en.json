@@ -6,14 +6,15 @@
     "contacto": "Contact"
   },
   "hero": {
-    "saludo": "Hi, I'm",
+    "saludo": "What do I do?",
     "botonCv": "Download CV",
     "nombre": "Jhojan Aponte",
     "titulo": "Full Stack Developer",
-    "descripcion": "Full-Stack Developer with experience in ASP.NET, NestJS, Perl, and Angular. Familiar with using Docker and AWS for application deployment. Focused on solving technical problems logically and independently, always prioritizing the quality of the final result."
+    "descripcion": "Full-Stack Developer from Bucaramanga, Colombia. I have experience in ASP.NET, NestJS, Perl, and Angular. I am familiar with using Docker and AWS for application deployment. I am focused on solving technical problems logically and independently, always prioritizing the quality of the final result."
   },
   "aboutme": {
     "titulo": "Who am I?",
+    "introduccion": "Full-Stack Developer focused on creating efficient, scalable, and high-quality systems. I combine my ongoing academic training with practical experience in software architecture, testing methodologies, and cloud solutions. I am known for my self-management skills, critical thinking to solve technical problems, and a consistent track record of delivering solid results. With a strong command of English that supports my excellent performance in the field, I invite you to explore my full profile in the following section.",
     "roles": [
       {
         "numero": "01",
@@ -30,10 +31,59 @@
       {
         "numero": "03",
         "titulo": "Freelancer",
-        "descripcion": "Freelance software developer, autonomy and knowledge. Web page designer and Android application developer.",
+        "descripcion": "Freelance software developer with strong problem-solving skills. I have developed custom software and Android apps.",
         "icon": "bi-person-fill"
       }
-    ]
+    ],
+    "timeline": {
+      "titulo": "My Professional Journey",
+      "educacion": {
+         "encabezado": "Education",
+         "datos": [
+          {
+            "anio": "2018-2019",
+            "titulo": "System Technician",
+            "institucion": "SENA",
+            "descripcion": "Training in networks, hardware and operating systems, basic programming."
+          },
+          {
+            "anio": "2020-2024",
+            "titulo": "Technologist in Analysis and Development of Information Systems",
+            "institucion": "Santander Technological Units - UTS",
+            "descripcion": "Studies in front-end development, back-end and databases"
+          },
+          {
+            "anio": "2025",
+            "titulo": "Intermediate English",
+            "institucion": "ULA Language Academy",
+            "descripcion": "English training with focus on technical communication"
+          }
+        ]
+      },
+      "experiencia": {
+        "encabezado": "Experience",
+        "datos": [
+            {
+              "anio": "2019",
+              "titulo": "Junior Developer",
+              "empresa": "Tech Startup",
+              "descripcion": "First steps in web development with modern technologies"
+          },
+          {
+            "anio": "2021",
+            "titulo": "Full Stack Developer",
+            "empresa": "Software Company",
+            "descripcion": "Development of applications with ASP.NET and Angular"
+          },
+          {
+            "anio": "2023",
+            "titulo": "Senior Developer",
+            "empresa": "Tech Company",
+            "descripcion": "Technical leadership and project architecture"
+          }
+        ]
+      }
+    }
   },
   "technologies": {
     "titulo": "Technologies",
@@ -55,5 +105,9 @@
       { "nombre": "Docker", "icon": "logo-docker.png" },
       { "nombre": "Jira", "icon": "logo-jira.svg" }
     ]
+  },
+  "footer": {
+    "texto": "Icons taken from",
+    "conector": "and"
   }
 }

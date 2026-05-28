@@ -103,6 +103,8 @@
   z-index: 1;
   min-height: 100vh;
   pointer-events: none;
+  display: flex;
+  flex-direction: column;
   --glass-text-color: #1a1a2e;
   --card-title-color: #1a1a2e;
   --card-desc-color: rgba(26, 26, 46, 0.8);
@@ -117,4 +119,8 @@
 app-navbar,
 main {
   pointer-events: auto;
+}
+
+main.content-wrapper {
+  flex: 1;
 }

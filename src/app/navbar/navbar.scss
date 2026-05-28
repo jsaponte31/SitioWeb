@@ -7,6 +7,12 @@
   color: #ffffff !important;
 }
 
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
 .navbar-nav {
   width: 100%;
   justify-content: center !important;
@@ -36,9 +42,16 @@
 
 .bg-dark-color {
   background: rgba(18, 76, 170, 1) !important;
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.bg-glass {
+  background: rgba(18, 76, 170, 0.4) !important;
+  backdrop-filter: blur(15px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  transition: all 0.3s ease;
 }
 
 .icon-info {
