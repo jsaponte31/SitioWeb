@@ -44,7 +44,11 @@
                 <div class="timeline-year">{{ exp.anio }}</div>
                 <h4 class="timeline-item-title">{{ exp.titulo }}</h4>
                 <p class="timeline-institution">{{ exp.empresa }}</p>
-                <p class="timeline-item-description">{{ exp.descripcion }}</p>
+                <ul class="timeline-descriptions">
+                  @for (desc of exp.descripciones; track $index) {
+                    <li class="timeline-item-description">{{ desc }}</li>
+                  }
+                </ul>
               </div>
             </div>
           }

@@ -48,8 +48,8 @@
             },
             {
               "anio": "2020-2024",
-              "titulo": "Tecnoológo en Análisis y Desarrollo de Sistemas de Información",
-              "institucion": "Unidades tecnoologias de Santander - UTS",
+              "titulo": "Tecnólogo en análisis y desarrollo de sistemas Informaticos",
+              "institucion": "Unidades tecnológicas de Santander - UTS",
               "descripcion": "Estudios en desarrollo front-end, back-end y base de datos"
             },
             {
@@ -64,22 +64,38 @@
         "encabezado": "Experiencia",
         "datos": [
           {
-            "anio": "2019",
-            "titulo": "Desarrollador Junior",
-            "empresa": "Tech Startup",
-            "descripcion": "Primeros pasos en desarrollo web con tecnologías modernas"
+            "anio": "2020-2022",
+            "titulo": "Técnico de Soporte TI",
+            "empresa": "Clínica Chicamocha",
+            "descripciones": [
+              "Auxiliar de técnico en sistemas. Administración de redes de datos, soporte técnico de software, hardware de equipos de computo e impresoras.",
+              "Utilización herramientas ofimáticas como Excel y Word.",
+              "Manejo de SQL server.",
+              "Preparación de informes mensuales a entidades de Salud Nacionales."
+            ]
           },
           {
-            "anio": "2021",
+            "anio": "2022-2025",
             "titulo": "Desarrollador Full Stack",
-            "empresa": "Empresa de Software",
-            "descripcion": "Desarrollo de aplicaciones con ASP.NET y Angular"
+            "empresa": "Tiresia Soluciones Tecnologicas",
+            "descripciones": [
+              "Desarrollo backend en Perl,PHP,Node js y frontend en Angular.",
+              "Integración y desarrollo de sistemas ERP y POS.",
+              "Soporte y desarrollo de e-commerce.",
+              "Despliegue y funcionamiento mediante Docker y servidores de intranet."
+            ]
           },
           {
-            "anio": "2023",
-            "titulo": "Desarrollador Senior",
-            "empresa": "Compañía Tech",
-            "descripcion": "Liderazgo técnico y arquitectura de proyectos"
+            "anio": "2025 - Actualidad",
+            "titulo": "Desarrollador Full Stack",
+            "empresa": "Ocupasalud",
+            "descripciones": [
+              "Lidero la modernización y actualización del software interno, gestionando el ciclo completo de vida del desarrollo.",
+              "Integro módulos de atención operativa con sistemas financieros y de facturación electrónica de alta precisión.",
+              "Desarrollo soluciones escalables con arquitecturas robustas basadas en ASP.NET y Angular.",
+              "Optimizo la persistencia de datos en entornos híbridos utilizando PostgreSQL y SQL Server.",
+              "Diseño e implemento un sistema de gestión de calidad a medida, garantizando la trazabilidad institucional y el cumplimiento de estándares técnicos."
+            ]
           }
         ]
       }

@@ -63,23 +63,39 @@
       "experiencia": {
         "encabezado": "Experience",
         "datos": [
-            {
-              "anio": "2019",
-              "titulo": "Junior Developer",
-              "empresa": "Tech Startup",
-              "descripcion": "First steps in web development with modern technologies"
+          {
+            "anio": "2020-2022",
+            "titulo": "IT Support Technician",
+            "empresa": "Clínica Chicamocha",
+            "descripciones": [
+              "Assistant systems technician. Administration of data networks, technical software support, hardware for computers and printers.",
+              "Use of office tools such as Excel and Word.",
+              "SQL Server management.",
+              "Preparation of monthly reports for National Health entities."
+            ]
           },
           {
-            "anio": "2021",
+            "anio": "2022-2025",
             "titulo": "Full Stack Developer",
-            "empresa": "Software Company",
-            "descripcion": "Development of applications with ASP.NET and Angular"
+            "empresa": "Tiresia Technological Solutions",
+            "descripciones": [
+              "Backend development in Perl, PHP, Node.js and frontend in Angular.",
+              "Integration and development of ERP and POS systems.",
+              "Support and development of e-commerce.",
+              "Deployment and operation via Docker and intranet servers."
+            ]
           },
           {
-            "anio": "2023",
-            "titulo": "Senior Developer",
-            "empresa": "Tech Company",
-            "descripcion": "Technical leadership and project architecture"
+            "anio": "2025 - Present",
+            "titulo": "Full Stack Developer",
+            "empresa": "Ocupasalud",
+            "descripciones": [
+              "Leading the modernization and updating of internal software, managing the complete development lifecycle.",
+              "Integrating operational care modules with financial and high-precision electronic billing systems.",
+              "Developing scalable solutions with robust architectures based on ASP.NET and Angular.",
+              "Optimizing data persistence in hybrid environments using PostgreSQL and SQL Server.",
+              "Designing and implementing a custom quality management system, ensuring institutional traceability and compliance with technical standards."
+            ]
           }
         ]
       }
