@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { LanguageService } from '../services/language.service';
 
 @Component({
   selector: 'app-projects',
@@ -6,4 +7,6 @@ import { Component } from '@angular/core';
   templateUrl: './projects.html',
   styleUrl: './projects.scss',
 })
-export class Projects {}
+export class Projects {
+  protected langService = inject(LanguageService);
+}

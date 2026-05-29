@@ -47,7 +47,11 @@
         "numero": "03",
         "titulo": "Freelancer",
         "descripcion": "Freelance software developer with strong problem-solving skills. I have developed custom software and Android apps.",
-        "icon": "bi-person-fill"
+        "icon": "bi-person-fill",
+        "highlight": {
+          "route": "/projects",
+          "items": []
+        }
       }
     ],
     "timeline": {
@@ -122,7 +126,7 @@
       { "nombre": "Angular", "icon": "logo-angular.webp" },
       { "nombre": "ASP.NET", "icon": "logo-csharp.webp" },
       { "nombre": "Perl", "icon": "logo-perl.webp" },
-      { "nombre": "Php", "icon": "logo-php.webp" },
+      { "nombre": "PHP", "icon": "logo-php.webp" },
       { "nombre": "Git", "icon": "logo-git.png" },
       { "nombre": "SQL", "icon": "logo-sql.png" }
     ]
@@ -132,9 +136,35 @@
     "lista": [
       { "nombre": "Kotlin", "icon": "logo-kotlin.webp" },
       { "nombre": "Node.js", "icon": "logo-nodejs.png" },
-      { "nombre": "Java Script", "icon": "logo-javascript.png" },
+      { "nombre": "JavaScript", "icon": "logo-javascript.png" },
       { "nombre": "Docker", "icon": "logo-docker.png" },
       { "nombre": "Jira", "icon": "logo-jira.svg" }
+    ]
+  },
+  "projects": {
+    "titulo": "Projects",
+    "lista": [
+      {
+        "titulo": "Help Desk",
+        "imagen": "assets/proyecto-help-desk.webp",
+        "descripcion": "Technical support ticket management system developed with Angular and Laravel. It allows users to report incidents, follow up in real time, and manage assignments across different teams within the organization. Includes a dashboard with metrics and automated notifications.",
+        "tecnologias": "Angular · Laravel · SQL Server · Docker",
+        "url": "https://github.com/jsaponte31/Mesa-ayuda-API"
+      },
+      {
+        "titulo": "Happiness App",
+        "imagen": "assets/proyecto_happinnes.webp",
+        "descripcion": "A mobile application for tracking emotional well-being and personal happiness. Developed in Kotlin for Android, it lets users log moods, set daily goals, and enjoy interactive mini-games to encourage habit-building.",
+        "tecnologias": "Kotlin · Firebase · Material Design",
+        "url": "https://github.com/jsaponte31/Happiness-app"
+      },
+      {
+        "titulo": "Parking App",
+        "imagen": "assets/proyecto-parking-app.webp",
+        "descripcion": "Mobile application for parking management. It controls vehicle check-in and check-out, manages reservations via a connection to an ESP32 device over the local network, generates automatic billing, and shows real-time availability. Built with Kotlin and a PostgreSQL database hosted on Supabase.",
+        "tecnologias": "Kotlin · PostgreSQL · Supabase",
+        "url": "https://github.com/jsaponte31/Parking-app"
+      }
     ]
   },
   "footer": {

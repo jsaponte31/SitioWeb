@@ -1,1 +1,19 @@
-<p>projects works!</p>
+<h2 class="section-title">{{ langService.text().projects.titulo }}</h2>
+
+<div class="projects-list">
+  @for (project of langService.text().projects.lista; track project.titulo) {
+    <div class="project-card">
+      <div class="project-image">
+        <img [src]="project.imagen" [alt]="project.titulo" loading="lazy" />
+      </div>
+      <div class="project-content">
+        <h3 class="project-title">{{ project.titulo }}</h3>
+        <p class="project-description">{{ project.descripcion }}</p>
+        <a href="{{ project.url }}" target="_blank" class="icon-info" title="Ver repositorio">
+          <i class="bi bi-github"></i>
+        </a>
+        <span class="project-tech">{{ project.tecnologias }}</span>
+      </div>
+    </div>
+  }
+</div>

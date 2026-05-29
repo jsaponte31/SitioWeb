@@ -47,7 +47,11 @@
         "numero": "03",
         "titulo": "Free Lance",
         "descripcion": "Desarrollador de software freelance, autonomo y con buenas resolución de problemas. Eh desarrollado sotfware a medida y desarrollado aplicaciones android.",
-        "icon": "bi-person-fill"
+        "icon": "bi-person-fill",
+        "highlight": {
+          "route": "/projects",
+          "items": []
+        }
       }
     ],
     "timeline": {
@@ -122,7 +126,7 @@
       { "nombre": "Angular", "icon": "logo-angular.webp" },
       { "nombre": "ASP.NET", "icon": "logo-csharp.webp" },
       { "nombre": "Perl", "icon": "logo-perl.webp" },
-      { "nombre": "Php", "icon": "logo-php.webp" },
+      { "nombre": "PHP", "icon": "logo-php.webp" },
       { "nombre": "Git", "icon": "logo-git.png" },
       { "nombre": "SQL", "icon": "logo-sql.png" }
     ]
@@ -132,9 +136,32 @@
     "lista": [
       { "nombre": "Kotlin", "icon": "logo-kotlin.webp" },
       { "nombre": "Node.js", "icon": "logo-nodejs.png" },
-      { "nombre": "Java Script", "icon": "logo-javascript.png" },
+      { "nombre": "JavaScript", "icon": "logo-javascript.png" },
       { "nombre": "Docker", "icon": "logo-docker.png" },
       { "nombre": "Jira", "icon": "logo-jira.svg" }
+    ]
+  },
+  "projects": {
+    "titulo": "Proyectos",
+    "lista": [
+      {
+        "titulo": "Help Desk",
+        "imagen": "assets/proyecto-help-desk.webp",
+        "descripcion": "Sistema de gestión de tickets de soporte técnico desarrollado con Angular y Laravel. Permite a los usuarios reportar incidencias, hacer seguimiento en tiempo real y gestionar asignaciones a diferentes equipos dentro de la organización. Incluye dashboard con métricas y notificaciones automatizadas.",
+        "tecnologias": "Angular · Laravel · SQL Server · Docker"
+      },
+      {
+        "titulo": "Happiness App",
+        "imagen": "assets/proyecto_happinnes.webp",
+        "descripcion": "Aplicación mobile para el seguimiento del bienestar emocional y la felicidad personal. Desarrollada en Kotlin para Android, permite registrar estados de ánimo, establecer metas diarias y cuentas con juegos interactivos.",
+        "tecnologias": "Kotlin · Firebase · Material Design"
+      },
+      {
+        "titulo": "Parking App",
+        "imagen": "assets/proyecto-parking-app.webp",
+        "descripcion": "Aplicación mobile para la gestión de parqueaderos. Controla ingresos y salidas de vehículos, administra reservas, a partir de una conexión a una tarjeta ESP32 via a internet dentro de una misma red, genera facturación automática y muestra disponibilidad en tiempo real. Construida con Kotlin, y base de datos PostgreSQL alojada en Supabase.",
+        "tecnologias": "Kotlin · PostgreSQL · Supabase"
+      }
     ]
   },
   "footer": {
