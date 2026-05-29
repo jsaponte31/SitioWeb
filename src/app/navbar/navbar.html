@@ -30,7 +30,7 @@
       <a href="https://github.com/jsaponte31" target="_blank" class="icon-info" title="GitHub">
         <i class="bi bi-github"></i>
       </a>
-      <a href="assets/CV_ES_JhojanAponte.pdf" download class="icon-info" title="{{ langService.text().hero.botonCv }}">
+      <a [href]="getCvUrl()" download class="icon-info" title="{{ langService.text().hero.botonCv }}">
         <i class="bi bi-download"></i>
       </a>
       <button (click)="langService.toggleLanguage()" class="lang-toggle-btn">

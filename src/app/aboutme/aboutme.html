@@ -19,7 +19,7 @@
           @for (edu of langService.text().aboutme.timeline.educacion.datos; track edu.anio) {
             <div class="timeline-item">
               <div class="timeline-dot"></div>
-              <div class="timeline-content">
+              <div class="timeline-content" [class.highlighted]="isHighlighted('edu', edu.institucion)">
                 <div class="timeline-year">{{ edu.anio }}</div>
                 <h4 class="timeline-item-title">{{ edu.titulo }}</h4>
                 <p class="timeline-institution">{{ edu.institucion }}</p>
@@ -40,7 +40,7 @@
           @for (exp of langService.text().aboutme.timeline.experiencia.datos; track exp.anio) {
             <div class="timeline-item">
               <div class="timeline-dot"></div>
-              <div class="timeline-content">
+              <div class="timeline-content" [class.highlighted]="isHighlighted('exp', exp.empresa)">
                 <div class="timeline-year">{{ exp.anio }}</div>
                 <h4 class="timeline-item-title">{{ exp.titulo }}</h4>
                 <p class="timeline-institution">{{ exp.empresa }}</p>

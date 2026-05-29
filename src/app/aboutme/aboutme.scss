@@ -268,7 +268,7 @@
 
   &.left {
     align-items: flex-end;
-    gap: 10rem;
+    gap: 12rem;
   }
 
   &.right {
@@ -279,7 +279,7 @@
 .timeline-item {
   display: flex;
   gap: 1.5rem;
-  align-items: flex-start;
+  align-items: center;
   width: 100%;
   max-width: 350px;
 
@@ -290,14 +290,15 @@
 
 .timeline-dot {
   position: relative;
-  width: 16px;
-  height: 16px;
+  width: 14px;
+  height: 14px;
   border-radius: 50%;
   background: rgba(18, 76, 170, 0.6);
   border: 3px solid rgba(18, 76, 170, 0.3);
   flex-shrink: 0;
-  margin-top: 3px;
-  
+  margin: 0;
+  align-self: center;
+
   &::after {
     content: '';
     position: absolute;
@@ -499,4 +500,16 @@
   .glass-content h1 {
     font-size: 1.8rem;
   }
+}
+
+// Highlight animation for role navigation
+.timeline-content.highlighted {
+  border-color: #E63946 !important;
+  box-shadow: 0 0 20px rgba(230, 57, 70, 0.5), 0 0 40px rgba(230, 57, 70, 0.2);
+  animation: highlightPulse 0.6s ease-in-out 3;
+}
+
+@keyframes highlightPulse {
+  0%, 100% { box-shadow: 0 0 20px rgba(230, 57, 70, 0.5); }
+  50% { box-shadow: 0 0 30px rgba(230, 57, 70, 0.8), 0 0 60px rgba(230, 57, 70, 0.3); }
 }

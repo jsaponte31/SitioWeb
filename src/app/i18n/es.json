@@ -20,13 +20,28 @@
         "numero": "01",
         "titulo": "Desarrollador de Software",
         "descripcion": "Desarrollador de software con stack amplio, me destaco por mi capacidad analítica, autonomía y enfoque en resultados técnicos sólidos.",
-        "icon": "bi-code-slash"
+        "icon": "bi-code-slash",
+        "highlight": {
+          "route": "/about",
+          "items": [
+            { "type": "edu", "institucion": "Unidades tecnológicas de Santander - UTS", "block": "end" },
+            { "type": "exp", "empresa": "Tiresia Soluciones Tecnologicas", "block": "end" },
+            { "type": "exp", "empresa": "Grupo empresarial Prometeo", "block": "end" }
+          ]
+        }
       },
       {
         "numero": "02",
         "titulo": "Técnico TI",
         "descripcion": "Técnico con capacidad adaptativa, conocimiento en redes LAN, hardware, conocimiento en servidores y alojamiento en nube.",
-        "icon": "bi-display"
+        "icon": "bi-display",
+        "highlight": {
+          "route": "/about",
+          "items": [
+            { "type": "edu", "institucion": "SENA", "block": "start" },
+            { "type": "exp", "empresa": "Clínica Chicamocha", "block": "start" }
+          ]
+        }
       },
       {
         "numero": "03",
@@ -88,7 +103,7 @@
           {
             "anio": "2025 - Actualidad",
             "titulo": "Desarrollador Full Stack",
-            "empresa": "Ocupasalud",
+            "empresa": "Grupo empresarial Prometeo",
             "descripciones": [
               "Lidero la modernización y actualización del software interno, gestionando el ciclo completo de vida del desarrollo.",
               "Integro módulos de atención operativa con sistemas financieros y de facturación electrónica de alta precisión.",
@@ -125,5 +140,14 @@
   "footer": {
     "texto": "Iconos tomados de",
     "conector": "y"
+  },
+  "contact": {
+    "titulo": "Contáctame",
+    "telefonoLabel": "Teléfono",
+    "telefonoValor": "+57 317 750 4271",
+    "emailLabel": "Correo",
+    "emailValor": "jhojanapo@gmail.com",
+    "ubicacionLabel": "Ubicación",
+    "ubicacionValor": "Bucaramanga, Santander, Colombia"
   }
 }

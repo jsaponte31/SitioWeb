@@ -10,7 +10,7 @@
   <h2 class="section-title">{{ langService.text().hero.saludo }}</h2>
   <div class="cards-container">
     @for (role of langService.text().aboutme.roles; track role.numero) {
-      <div class="role-card">
+      <div class="role-card" (click)="navigateToRole(role)">
         <div class="card-header">
           <div class="card-icon">
             <i [class]="'bi ' + role.icon"></i>

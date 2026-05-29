@@ -17,4 +17,11 @@ export class Navbar {
     const scrollPosition = window.scrollY;
     this.isScrolled.set(scrollPosition > 50);
   }
+
+  getCvUrl(): string {
+    const lang = this.langService.currentLang();
+    return lang === 'es'
+      ? 'assets/CV_ES_JhojanAponte.pdf'
+      : 'assets/CV_EN_JhojanAponte.pdf';
+  }
 }

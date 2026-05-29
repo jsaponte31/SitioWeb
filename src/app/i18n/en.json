@@ -20,13 +20,28 @@
         "numero": "01",
         "titulo": "Software Developer",
         "descripcion": "Software developer with a broad stack, I stand out for my analytical skills, autonomy, and focus on solid technical results.",
-        "icon": "bi-code-slash"
+        "icon": "bi-code-slash",
+        "highlight": {
+          "route": "/about",
+          "items": [
+            { "type": "edu", "institucion": "Santander Technological Units - UTS", "block": "end" },
+            { "type": "exp", "empresa": "Tiresia Technological Solutions", "block": "end" },
+            { "type": "exp", "empresa": "Grupo empresarial Prometeo", "block": "end" }
+          ]
+        }
       },
       {
         "numero": "02",
         "titulo": "IT Technician",
         "descripcion": "Technician with adaptive ability, knowledge in LAN networks, hardware, server knowledge and cloud hosting.",
-        "icon": "bi-display"
+        "icon": "bi-display",
+        "highlight": {
+          "route": "/about",
+          "items": [
+            { "type": "edu", "institucion": "SENA", "block": "start" },
+            { "type": "exp", "empresa": "Clínica Chicamocha", "block": "start" }
+          ]
+        }
       },
       {
         "numero": "03",
@@ -88,7 +103,7 @@
           {
             "anio": "2025 - Present",
             "titulo": "Full Stack Developer",
-            "empresa": "Ocupasalud",
+            "empresa": "Grupo empresarial Prometeo",
             "descripciones": [
               "Leading the modernization and updating of internal software, managing the complete development lifecycle.",
               "Integrating operational care modules with financial and high-precision electronic billing systems.",
@@ -125,5 +140,14 @@
   "footer": {
     "texto": "Icons taken from",
     "conector": "and"
+  },
+  "contact": {
+    "titulo": "Contact me",
+    "telefonoLabel": "Phone",
+    "telefonoValor": "+57 317 750 4271",
+    "emailLabel": "Email",
+    "emailValor": "jhojanapo@gmail.com",
+    "ubicacionLabel": "Location",
+    "ubicacionValor": "Bucaramanga, Santander, Colombia"
   }
 }
