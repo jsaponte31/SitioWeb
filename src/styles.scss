@@ -1,12 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
 @use 'ngx-toastr/toastr';
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 .background-canvas {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  right: 0;
+  bottom: 0;
   z-index: 1;  /* Al fondo */
   background-color: #f8f9fa;/* O el color claro de Bootstrap que prefieras */
 }

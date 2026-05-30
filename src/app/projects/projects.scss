@@ -107,6 +107,10 @@
 }
 
 @media (max-width: 768px) {
+  :host {
+    padding: 1.5rem;
+  }
+
   .project-card {
     flex-direction: column;
     padding: 1.5rem;
@@ -120,6 +124,43 @@
 
   .section-title {
     font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  :host {
+    padding: 1rem;
+  }
+
+  .section-title {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+  }
+
+  .projects-list {
+    gap: 1.5rem;
+  }
+
+  .project-card {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .project-image {
+    max-height: 180px;
+  }
+
+  .project-title {
+    font-size: 1.15rem;
+  }
+
+  .project-description {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+
+  .project-tech {
+    font-size: 0.78rem;
   }
 }
 

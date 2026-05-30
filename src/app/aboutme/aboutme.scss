@@ -51,6 +51,7 @@
       transparent 60%,
       rgba(255, 255, 255, 0.1) 100%
     );
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
@@ -469,14 +470,24 @@
   .timeline-items {
     padding-left: 40px;
     gap: 1.5rem;
+
+    &.left {
+      gap: 1.5rem;
+    }
   }
 
   .timeline-item {
     flex-direction: row !important;
+    max-width: 100%;
+    width: 100%;
   }
 
   .timeline-content {
     padding: 1rem;
+    width: auto;
+    max-width: 100%;
+    flex: 1;
+    min-width: 0;
   }
 
   .timeline-item-title {
@@ -499,6 +510,83 @@
 
   .glass-content h1 {
     font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 576px) {
+  :host {
+    padding: 0.75rem;
+  }
+
+  .liquid-glass-card {
+    padding: 1.25rem;
+  }
+
+  .glass-content h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .glass-content .description {
+    font-size: 0.9rem;
+  }
+
+  .timeline-card {
+    padding: 1rem;
+    margin-top: 2rem;
+  }
+
+  .timeline-title {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .timeline-content {
+    width: auto;
+    max-width: 100%;
+    padding: 0.75rem;
+    flex: 1;
+    min-width: 0;
+  }
+
+  .timeline-items.left .timeline-content,
+  .timeline-items.right .timeline-content {
+    height: auto;
+  }
+
+  .timeline-items {
+    gap: 1rem;
+
+    &.left {
+      gap: 1rem;
+    }
+  }
+
+  .timeline-item {
+    max-width: 100%;
+    width: 100%;
+    gap: 0.75rem;
+  }
+
+  .section-label {
+    font-size: 1rem;
+  }
+
+  .timeline-year {
+    font-size: 0.78rem;
+  }
+
+  .timeline-item-title {
+    font-size: 0.95rem;
+  }
+
+  .timeline-institution,
+  .timeline-item-description {
+    font-size: 0.82rem;
+  }
+
+  .timeline-descriptions li {
+    font-size: 0.82rem;
   }
 }
 

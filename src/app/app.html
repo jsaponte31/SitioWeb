@@ -4,6 +4,10 @@
   <i class="bi" [class.bi-moon-fill]="!darkMode()" [class.bi-sun-fill]="darkMode()"></i>
 </button>
 
+<button class="mobile-lang-toggle" (click)="toggleLanguage()" [attr.aria-label]="langService.currentLang() === 'es' ? 'Cambiar a inglés' : 'Cambiar a español'">
+  {{ langService.currentLang() === 'es' ? 'EN' : 'ES' }}
+</button>
+
 <button class="scroll-top" [class.visible]="showScrollTop()" (click)="scrollToTop()" aria-label="Volver arriba">
   <i class="bi bi-arrow-up"></i>
 </button>

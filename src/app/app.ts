@@ -1,7 +1,8 @@
-import { Component, signal, OnInit, computed } from '@angular/core';
+import { Component, inject, signal, OnInit, computed } from '@angular/core';
 import { Router, NavigationEnd, RouterOutlet } from '@angular/router';
 import { Navbar } from "./navbar/navbar";
 import { Footer } from "./footer/footer";
+import { LanguageService } from './services/language.service';
 import { tsParticles } from '@tsparticles/engine';
 import { loadFull } from 'tsparticles';
 import { MoveDirection, OutMode } from '@tsparticles/engine';
@@ -15,6 +16,7 @@ import { MoveDirection, OutMode } from '@tsparticles/engine';
 export class App implements OnInit {
   protected readonly title = signal('SitioWeb');
   protected readonly darkMode = signal(App.initDarkMode());
+  protected readonly langService = inject(LanguageService);
 
   private static initDarkMode(): boolean {
     try {
@@ -121,6 +123,10 @@ export class App implements OnInit {
     this.darkMode.set(next);
     localStorage.setItem('darkMode', String(next));
     this.reloadParticles();
+  }
+
+  protected toggleLanguage(): void {
+    this.langService.toggleLanguage();
   }
 
   private async reloadParticles(): Promise<void> {

@@ -1,41 +1,45 @@
 <nav class="navbar navbar-expand-lg navbar-dark shadow-sm py-2 sticky-top" [class.bg-dark-color]="!isScrolled()" [class.bg-glass]="isScrolled()">
   <div class="container">
-    <a class="d-flex align-items-center fw-bold" [routerLink]="['/']">
-      <img src="assets/logo-1.png" alt="Logo" height="60">
-    </a>
-
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-5">
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">{{ langService.text().nav.inicio }}</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/about" routerLinkActive="active">{{ langService.text().nav.sobreMi }}</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/projects" routerLinkActive="active">{{ langService.text().nav.proyectos }}</a>
-      </li>
-      <li class="nav-item"> 
-        <a class="nav-link" routerLink="/contact" routerLinkActive="active">{{ langService.text().nav.contacto }}</a>
-      </li>
-    </ul>
-
-    <div class="d-flex align-items-center gap-3 fs-5 vs-icons-container">
-      <a href="https://www.linkedin.com/in/jhojan-aponte-35a316254" target="_blank" class="icon-info" title="LinkedIn">
-        <i class="bi bi-linkedin"></i>
+    <div class="navbar-top-row">
+      <a class="navbar-brand-logo d-flex align-items-center fw-bold" [routerLink]="['/']">
+        <img src="assets/logo-1.png" alt="Logo" height="60">
       </a>
-      <a href="https://github.com/jsaponte31" target="_blank" class="icon-info" title="GitHub">
-        <i class="bi bi-github"></i>
-      </a>
-      <a [href]="getCvUrl()" download class="icon-info" title="{{ langService.text().hero.botonCv }}">
-        <i class="bi bi-download"></i>
-      </a>
-      <button (click)="langService.toggleLanguage()" class="lang-toggle-btn">
-        {{ langService.currentLang() === 'es' ? 'EN' : 'ES' }}
+
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
       </button>
+    </div>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-2 gap-lg-5">
+        <li class="nav-item">
+          <a class="nav-link" href="/" (click)="navigateFromMenu('/', $event)">{{ langService.text().nav.inicio }}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about" (click)="navigateFromMenu('/about', $event)">{{ langService.text().nav.sobreMi }}</a>
+        </li>
+        <li class="nav-item"> 
+          <a class="nav-link" href="/projects" (click)="navigateFromMenu('/projects', $event)">{{ langService.text().nav.proyectos }}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/contact" (click)="navigateFromMenu('/contact', $event)">{{ langService.text().nav.contacto }}</a>
+        </li>
+      </ul>
+
+      <div class="d-flex align-items-center justify-content-center justify-content-lg-end gap-3 fs-5 vs-icons-container">
+        <a href="https://www.linkedin.com/in/jhojan-aponte-35a316254" target="_blank" class="icon-info" title="LinkedIn">
+          <i class="bi bi-linkedin"></i>
+        </a>
+        <a href="https://github.com/jsaponte31" target="_blank" class="icon-info" title="GitHub">
+          <i class="bi bi-github"></i>
+        </a>
+        <a [href]="getCvUrl()" download class="icon-info" title="Descargar CV">
+          <i class="bi bi-download"></i>
+        </a>
+        <button (click)="langService.toggleLanguage()" class="lang-toggle-btn">
+          {{ langService.currentLang() === 'es' ? 'EN' : 'ES' }}
+        </button>
+      </div>
     </div>
   </div>
 </nav>

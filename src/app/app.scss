@@ -20,6 +20,10 @@
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
 
+.mobile-lang-toggle {
+  display: none;
+}
+
 .theme-toggle:hover {
   background: rgba(255, 255, 255, 0.25);
   border-color: rgba(255, 255, 255, 0.5);
@@ -90,12 +94,9 @@
 
 #tsparticles {
   position: fixed;
-  width: 100vw;
-  height: 100vh;
+  inset: 0;
   z-index: -1;
   /* Forzamos a que esté estrictamente detrás de todo */
-  top: 0;
-  left: 0;
 }
 
 .app-container {
@@ -123,4 +124,55 @@ main {
 
 main.content-wrapper {
   flex: 1;
+}
+
+@media (max-width: 576px) {
+  .theme-toggle {
+    top: 22px;
+    left: 20px;
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
+
+  .mobile-lang-toggle {
+    display: flex;
+    position: fixed;
+    top: 22px;
+    left: 68px;
+    z-index: 1000;
+    width: 36px;
+    height: 36px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    color: #000000;
+    font-size: 0.75rem;
+    font-weight: 700;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  .mobile-lang-toggle:hover {
+    background: rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: scale(1.1);
+  }
+
+  .mobile-lang-toggle:active {
+    transform: scale(0.95);
+  }
+
+  .scroll-top {
+    bottom: 16px;
+    right: 12px;
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
 }
