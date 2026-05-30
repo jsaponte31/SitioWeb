@@ -1,33 +1,86 @@
 <h2 class="section-title">{{ langService.text().contact.titulo }}</h2>
 
-<div class="contact-card">
-  <div class="contact-item">
-    <div class="contact-icon">
-      <i class="bi bi-telephone-fill"></i>
-    </div>
-    <div class="contact-content">
-      <p class="contact-label">{{ langService.text().contact.telefonoLabel }}</p>
-      <p class="contact-value">{{ langService.text().contact.telefonoValor }}</p>
-    </div>
-  </div>
+<div class="container-fluid contact-wrapper">
+  <div class="row g-4 justify-content-center">
+    
+    <div class="col-lg-5 col-md-6">
+      <div class="contact-card">
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="bi bi-telephone-fill"></i>
+          </div>
+          <div class="contact-content">
+            <p class="contact-label">{{ langService.text().contact.telefonoLabel }}</p>
+            <p class="contact-value">{{ langService.text().contact.telefonoValor }}</p>
+          </div>
+        </div>
 
-  <div class="contact-item">
-    <div class="contact-icon">
-      <i class="bi bi-envelope-fill"></i>
-    </div>
-    <div class="contact-content">
-      <p class="contact-label">{{ langService.text().contact.emailLabel }}</p>
-      <p class="contact-value">{{ langService.text().contact.emailValor }}</p>
-    </div>
-  </div>
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="bi bi-envelope-fill"></i>
+          </div>
+          <div class="contact-content">
+            <p class="contact-label">{{ langService.text().contact.emailLabel }}</p>
+            <p class="contact-value" [innerHTML]="langService.text().contact.emailValor"></p>
+          </div>
+        </div>
 
-  <div class="contact-item">
-    <div class="contact-icon">
-      <i class="bi bi-geo-alt-fill"></i>
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="bi bi-geo-alt-fill"></i>
+          </div>
+          <div class="contact-content">
+            <p class="contact-label">{{ langService.text().contact.ubicacionLabel }}</p>
+            <p class="contact-value">{{ langService.text().contact.ubicacionValor }}</p>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="contact-content">
-      <p class="contact-label">{{ langService.text().contact.ubicacionLabel }}</p>
-      <p class="contact-value">{{ langService.text().contact.ubicacionValor }}</p>
+
+    <div class="col-lg-6 col-md-6">
+      <div class="contact-card">
+        <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)" class="contact-form-container">
+          
+          <div class="row g-3">
+            <div class="col-sm-6">
+              <label class="contact-label mb-2">{{ langService.text().contact.form.labelNombre }} <span class="text-danger">*</span></label>
+              <input type="text" name="nombre" ngModel required class="form-control glass-input" placeholder="{{ langService.text().contact.form.placeholderNombre }}">
+            </div>
+            <div class="col-sm-6">
+              <label class="contact-label mb-2">{{ langService.text().contact.form.labelApellido }}</label>
+              <input type="text" name="apellidos" ngModel class="form-control glass-input" placeholder="{{ langService.text().contact.form.placeholderApellido }}">
+            </div>
+          </div>
+
+          <div>
+            <label class="contact-label mb-2">{{ langService.text().contact.form.labelEmail }} <span class="text-danger">*</span></label>
+            <input type="email" name="email" ngModel required email class="form-control glass-input" placeholder="{{ langService.text().contact.form.placeholderEmail }}">
+          </div>
+
+          <div>
+            <label class="contact-label mb-2">{{ langService.text().contact.form.labelDescripcion }} <span class="text-danger">*</span></label>
+            <textarea name="descripcion" ngModel required maxlength="500" class="form-control glass-input" rows="4" placeholder="{{ langService.text().contact.form.placeholderDescripcion }}"></textarea>
+            <small class="text-muted d-block mt-1">{{ langService.text().contact.form.charCount }}</small>
+          </div>
+
+          <div>
+            <label class="contact-label mb-2">{{ langService.text().contact.form.labelEmpresa }}</label>
+            <input type="text" name="empresa" ngModel class="form-control glass-input" placeholder="{{ langService.text().contact.form.placeholderEmpresa }}">
+          </div>
+          <div class="text-end">
+            <button type="submit" [disabled]="contactForm.invalid || isSubmitting()" class="btn btn-submit px-4 py-2">
+              @if (isSubmitting()) {
+                <span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+                {{ langService.text().contact.form.buttonSending }}
+              } @else {
+                {{ langService.text().contact.form.buttonSend }}
+              }
+            </button>
+          </div>
+
+        </form>
+      </div>
     </div>
+
   </div>
 </div>

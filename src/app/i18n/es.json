@@ -154,7 +154,7 @@
         "titulo": "Happiness App",
         "imagen": "assets/proyecto_happinnes.webp",
         "descripcion": "Aplicación mobile para el seguimiento del bienestar emocional y la felicidad personal. Desarrollada en Kotlin para Android, permite registrar estados de ánimo, establecer metas diarias y cuentas con juegos interactivos.",
-        "tecnologias": "Kotlin · Firebase · Material Design"
+        "tecnologias": "Kotlin · Supabase · Material Design"
       },
       {
         "titulo": "Parking App",
@@ -173,8 +173,23 @@
     "telefonoLabel": "Teléfono",
     "telefonoValor": "+57 317 750 4271",
     "emailLabel": "Correo",
-    "emailValor": "jhojanapo@gmail.com",
+    "emailValor": "jhojanapo&#64;gmail&#46;com",
     "ubicacionLabel": "Ubicación",
     "ubicacionValor": "Bucaramanga, Santander, Colombia"
+    ,"form": {
+      "labelNombre": "Nombre",
+      "placeholderNombre": "Nombre",
+      "labelApellido": "Apellidos",
+      "placeholderApellido": "Apellidos",
+      "labelEmail": "Email",
+      "placeholderEmail": "example@mail.com",
+      "labelDescripcion": "Descripción",
+      "placeholderDescripcion": "Escribe tu mensaje...",
+      "labelEmpresa": "Empresa (opcional)",
+      "placeholderEmpresa": "Nombre de la empresa",
+      "buttonSend": "Enviar",
+      "buttonSending": "Enviando...",
+      "charCount": "0 de 500 caracteres máximos."
+    }
   }
 }

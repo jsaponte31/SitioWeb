@@ -4,6 +4,7 @@
   align-items: center;
   min-height: calc(100vh - 100px);
   padding: 2rem;
+  width: 100%;
 }
 
 .section-title {
@@ -17,10 +18,15 @@
   width: 100%;
 }
 
+.contact-wrapper {
+  max-width: 1300px;
+  width: 100%;
+}
+
 .contact-card {
   position: relative;
-  max-width: 700px;
   width: 100%;
+  height: 100%; // Hace que ambas tarjetas tengan la misma altura simétrica
   padding: 3rem 2.5rem;
   border-radius: 24px;
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -28,13 +34,14 @@
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   box-shadow: 0 8px 32px rgba(18, 76, 170, 0.2),
-              inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
   overflow: hidden;
-  min-height: 400px;
+  min-height: 480px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   gap: 2rem;
+  color: var(--glass-text-color);
 }
 
 .contact-item {
@@ -58,7 +65,7 @@
 
   i {
     font-size: 1.5rem;
-    color: #00d4ff;
+    color: #00d4ff; // Tu azul brillante de acento
   }
 }
 
@@ -71,7 +78,7 @@
 
 .contact-label {
   font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--card-desc-color);
   margin: 0;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -85,4 +92,77 @@
   font-weight: 600;
   word-break: break-word;
   line-height: 1.6;
+}
+
+/* ==========================================================================
+   ESTILOS NUEVOS INTEGRADOS PARA EL FORMULARIO
+   ========================================================================== */
+.contact-form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  width: 100%;
+  z-index: 1;
+}
+
+.glass-input {
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--glass-text-color);
+  border-radius: 12px;
+  padding: 0.75rem 1rem;
+  transition: all 0.3s ease;
+
+  &:focus {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: #00d4ff;
+    box-shadow: 0 0 10px rgba(0, 212, 255, 0.25);
+    color: var(--glass-text-color);
+  }
+
+  &::placeholder {
+    color: var(--card-desc-color);
+  }
+}
+
+.btn-submit {
+  background: rgba(18, 76, 170, 0.6);
+  border: 1px solid rgba(0, 212, 255, 0.4);
+  color: var(--glass-text-color);
+  border-radius: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+
+  &:hover:not(:disabled) {
+    background: #00d4ff;
+    color: #121212;
+    box-shadow: 0 0 15px rgba(0, 212, 255, 0.4);
+    transform: translateY(-2px);
+  }
+
+  &:disabled {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.1);
+    color: var(--card-desc-color);
+    cursor: not-allowed;
+  }
+}
+
+.glass-alert {
+  background: rgba(40, 167, 69, 0.2);
+  border: 1px solid rgba(40, 167, 69, 0.4) !important;
+  color: #71dd8a;
+  border-radius: 12px;
+
+  &.error {
+    background: rgba(220, 53, 69, 0.2);
+    border: 1px solid rgba(220, 53, 69, 0.4) !important;
+    color: #ff8484;
+  }
+}
+
+.text-muted {
+  color: var(--card-desc-color) !important;
+  font-size: 0.8rem;
 }
